@@ -1,0 +1,9 @@
+.DS_Store
+cloud/node_modules/
+fhc-debug.log
+npm-debug.log
+fhc-config
+fhc-targets
+.fhc_local/
+.fhclocal
+node_modules
