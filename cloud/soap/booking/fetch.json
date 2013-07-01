@@ -1,7 +1,7 @@
 {
- "url": "http://207.225.246.188/Info-WebService/Service_RegionalInformation.asmx?op=Get_Bookings_forLDatesforClientIDforPartner",
+ "url": "http://www.w3schools.com/webservices/tempconvert.asmx",
  "headers": {
-  "SOAPAction": "http://tempuri.org/Get_Bookings_forLDatesforClientIDforPartner",
+  "SOAPAction": "http://tempuri.org/CelsiusToFahrenheit",
   "Content-Type": "text/xml"
  }
 }

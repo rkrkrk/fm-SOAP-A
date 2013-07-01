@@ -178,6 +178,10 @@ button {
 	padding-left: 1.67em;
 }
 
-#stockInfo{
-	font-size: 0.7em;
+#maygurneyWork {
+  font-size: 0.6em;
+}
+
+#maygurneyClient {
+  font-size: 0.4em;
 }

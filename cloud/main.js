@@ -3,10 +3,14 @@ var sys  = require('util');
 var http = require('http');
 var fs  = require('fs');
 var url = require('url');
+var xml2js = require('xml2js');
+
 
 
 module.exports.soapProxy = function soapProxy(args, callback) {
 	URL = url.parse(args.url, true);
+	console.log("oh yeah url "+JSON.stringify(URL));
+	
 	// Load Service Definition
 
   	try {
@@ -54,7 +58,15 @@ module.exports.soapProxy = function soapProxy(args, callback) {
 
 	getSoap(httpOptions,
 		function(d) {
-			return callback(null, {data: d.data});
+			console.log("doo bi doo "+d.data);
+			var parser = new xml2js.Parser();
+			parser.parseString(d.data, function (err, result) {
+
+		        console.dir(result['soap:Envelope']['soap:Body']);
+        		return callback(null, {data: result['soap:Envelope']['soap:Body']});
+		        console.log('Done');
+		    });
+			// return callback(null, {data: d.data});
 		},
 		function(e){
 			return callback(e);
@@ -66,14 +78,15 @@ module.exports.soapProxy = function soapProxy(args, callback) {
 function getSoap(options, success, error) {
 
   var req = http.request(options, function(res) {
+  	// success({data:"hello dere"});
     var data = '';
     res.setEncoding(options.encoding || 'utf8');
     res.on('data', function (chunk) { data += chunk; });
-    res.on('end', function () { success({ data: data, response: res });});
+    res.on('end', function () { success({ data: data });});
   });
   if (typeof options.body != 'undefined') req.write(options.body);
-
   req.end();
   
   req.on('error', function(e) { 'HTTP ERROR: ' + e.message; });
+  
 }

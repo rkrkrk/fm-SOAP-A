@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Get_Bookings_forLDatesforClientIDforPartner>
+         <tem:SLDate>##SDATE##</tem:SLDate>
+         <tem:ELDate>##EDATE##</tem:ELDate>
+         <!--Optional:-->
+         <tem:ClientID>##CLIENTID##</tem:ClientID>
+         <!--Optional:-->
+         <tem:Partner>MAS</tem:Partner>
+      </tem:Get_Bookings_forLDatesforClientIDforPartner>
+   </soapenv:Body>
+</soapenv:Envelope>

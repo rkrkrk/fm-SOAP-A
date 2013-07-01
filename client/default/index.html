@@ -1,8 +1,9 @@
 <link rel="stylesheet" type="text/css" href="css/basic.css"/>
 <script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/underscore.js"></script>
 <script type="text/javascript" src="./js/bind.js"></script>
 <script type="text/javascript" src="./js/util.js"></script>
-<script type="text/javascript" src="./js/stock.js"></script>
+<script type="text/javascript" src="./js/call.js"></script>
 
 <div class="loading">
 	loading....
@@ -14,15 +15,12 @@
 		<h2>Get MayGurney Work Items</h2>
 		<div class="padding form">
 			<div>
-				<input class="search" type="text" id="companyName" placeholder="Company Name" name="companyName"/>
-			</div>
-			<div>
 				<button id="submitQuery">
-					Submit
+					make SOAP call
 				</button>
 			</div>
-			<h4 id="stockSymbol"></h4>
-			<div id="stockInfo"></div>
+			<div id="maygurneyWork"></div>
+			<div id="maygurneyClient"></div>
 		</div>
 	
 	</div>

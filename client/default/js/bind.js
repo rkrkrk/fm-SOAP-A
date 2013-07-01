@@ -6,8 +6,7 @@
 function bindEvents(){
 
 	$("#submitQuery").bind("click",function(){
-		var companyName=$("#companyName").val();
-		stock.getStockInfo(companyName);
+		call.makeSOAPcall();
 	});
 	$("#maygurney").addClass("active");
 

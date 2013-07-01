@@ -1,0 +1,7 @@
+{
+ "url": "http://207.225.246.188/Info-WebService/Service_RegionalInformation.asmx?op=Get_Bookings_forLDatesforClientIDforPartner",
+ "headers": {
+  "SOAPAction": "http://tempuri.org/Get_Bookings_forLDatesforClientIDforPartner",
+  "Content-Type": "text/xml"
+ }
+}

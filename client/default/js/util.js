@@ -2,7 +2,6 @@
  * some utilities
  */
 
-$("#stock").addClass("active");
 
 function loading(isLoading){
 	if (isLoading){
